@@ -1,0 +1,27 @@
+.navegadorPrincipal {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  margin-top: 2%;
+}
+
+.botonNavegador {
+  height: 50px;
+  border-radius: 20px;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  background-color: black;
+  transition: color 1s ease;
+  transition: box-shadow 1s ease;
+}
+.botonNavegador:hover {
+  box-shadow: 2px 2px 20px white, -2px -2px 20px white;
+  color: rgb(255, 255, 255);
+}
+
+.botonNavegador:not(:hover) {
+  box-shadow: 0px 0px 0px white;
+  color: rgb(145, 145, 145);
+}
