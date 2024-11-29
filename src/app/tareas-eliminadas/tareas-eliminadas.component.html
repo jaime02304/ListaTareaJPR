@@ -1,1 +1,20 @@
-<p>tareas-eliminadas works!</p>
+<div class="container mt-4 d-flex justify-content-center">
+  <div class="card w-75">
+    <div class="card-header bg-primary text-white text-center">
+      <h4 class="mb-0">Lista de Tareas Eliminadas</h4>
+    </div>
+    <ul class="list-group list-group-flush w-100">
+      @for (tarea of tareas; track $index) { @if ( tarea.eliminada===true) {
+      <li
+        class="list-group-item d-flex justify-content-between align-items-center w-100"
+      >
+        <div style="width: 100%; text-align: center">
+          <p class="mb-0 text-dark">
+            <strong>Tarea: {{ tarea.name }}</strong>
+          </p>
+        </div>
+      </li>
+      } }
+    </ul>
+  </div>
+</div>

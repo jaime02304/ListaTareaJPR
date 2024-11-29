@@ -6,23 +6,14 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class TareaServiciosService {
-
+  private apiUrl = 'http://localhost:3000/ListaTareas';
   constructor(private httpClient: HttpClient) {}
- 
 
   leerTareas(): Observable<any> {
-    return this.httpClient.get('http://localhost:3000/ListaTareas') as Observable<any>;
+    return this.httpClient.get(this.apiUrl) as Observable<any>;
   }
 
-  aniadirTarea(){
-    //return this.tareas.push(tarea);
-  }
-
-  moatrarListaBorrada() {
-   
-  }
-
-  mostrarListaTerminada() {
-  
+  aniadirTarea(tarea: any): Observable<any> {
+    return this.httpClient.post(this.apiUrl, tarea);
   }
 }
