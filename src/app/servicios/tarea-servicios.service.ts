@@ -16,4 +16,8 @@ export class TareaServiciosService {
   aniadirTarea(tarea: any): Observable<any> {
     return this.httpClient.post(this.apiUrl, tarea);
   }
+
+  eliminarTareas(name:string ,tarea: any): Observable<any>{
+    return this.httpClient.put(`${this.apiUrl}/${name}`,tarea);
+  }
 }

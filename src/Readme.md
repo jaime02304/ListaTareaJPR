@@ -2,6 +2,6 @@ jsonServer estructura principal-->
 listaTareasDB.json
 {
 "ListaTareas": [
-{"Name": "Realizar el proyecto Angular", "Finalizada": false, "Eliminada": false }
+{"name": "Realizar el proyecto Angular", "finalizada": false, "eliminada": false }
 ]
 }
