@@ -4,22 +4,11 @@
       <h4 class="mb-0">Lista de Tareas</h4>
     </div>
     <ul class="list-group list-group-flush">
-      @for (tarea of tareas; track $index) { @if (tarea.finalizada===false &&
-      tarea.eliminada===false) {
-      <li
-        class="list-group-item d-flex justify-content-between align-items-center"
-      >
-        <div>
-          <p class="mb-0 text-dark">
-            <strong>Tarea: {{ tarea.name }}</strong>
-          </p>
-        </div>
-        <div>
-          <button class="btn btn-success btn-sm me-2">Finalizar tarea</button>
-          <button class="btn btn-danger btn-sm">Eliminar tarea</button>
-        </div>
-      </li>
+      @for (tarea of tareas; track $index){ @if
+      (tarea.finalizada===false && tarea.eliminada===false) {
+      <app-tareas-detalles [tarea]="tarea" ></app-tareas-detalles>
       } }
     </ul>
   </div>
 </div>
+<!-- (EliminarTarea)="eliminarTareas($event)" (FinalizarTarea)="finalizarTareas($event)" -->

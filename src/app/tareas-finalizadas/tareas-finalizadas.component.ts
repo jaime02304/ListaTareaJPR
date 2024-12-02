@@ -1,10 +1,12 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { TareaServiciosService } from '../servicios/tarea-servicios.service';
+import { TareasDetallesComponent } from "../tareas-detalles/tareas-detalles.component";
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-tareas-finalizadas',
   standalone: true,
-  imports: [],
+  imports: [TareasDetallesComponent, RouterModule],
   templateUrl: './tareas-finalizadas.component.html',
   styleUrl: './tareas-finalizadas.component.css',
 })

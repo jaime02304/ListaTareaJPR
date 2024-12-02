@@ -20,4 +20,7 @@ export class TareaServiciosService {
   eliminarTareas(name:string ,tarea: any): Observable<any>{
     return this.httpClient.put(`${this.apiUrl}/${name}`,tarea);
   }
+  finalizarTareas(name:string ,tarea: any): Observable<any>{
+    return this.httpClient.put(`${this.apiUrl}/${name}`,tarea);
+  }
 }

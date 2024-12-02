@@ -1,11 +1,13 @@
 import { TareaServiciosService } from './../servicios/tarea-servicios.service';
 import { Component, inject, OnInit } from '@angular/core';
 import { TareaNueva } from '../Modelos/tarea-nueva';
+import { TareasDetallesComponent } from '../tareas-detalles/tareas-detalles.component';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-mostrar-tareas',
   standalone: true,
-  imports: [],
+  imports: [TareasDetallesComponent,RouterModule],
   templateUrl: './mostrar-tareas.component.html',
   styleUrl: './mostrar-tareas.component.css',
 })
@@ -32,6 +34,15 @@ export class MostrarTareasComponent implements OnInit {
     tarea.eliminada = true;
     this.tareaServiciosService
       .eliminarTareas(tarea.name, tarea)
+      .subscribe((resp: any) => {
+        console.log(resp);
+      });
+  }
+
+  finalizarTareas(tarea: TareaNueva) {
+    tarea.finalizada = true;
+    this.tareaServiciosService
+      .finalizarTareas(tarea.name, tarea)
       .subscribe((resp: any) => {
         console.log(resp);
       });
