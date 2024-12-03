@@ -1,12 +1,12 @@
-.container{
+.container {
   height: 70%;
   width: 60%;
   align-items: center;
 }
 
-.list-group-item{
+.list-group-item {
   height: 80px;
-  background-color:rgba(145, 142, 142, 0.664);
+  background-color: rgba(145, 142, 142, 0.664);
   align-items: center;
   width: 100%;
   text-align: center;
@@ -14,5 +14,5 @@
 
 .list-group {
   max-height: 300px; /* Altura máxima que permite el scroll */
-  overflow-y: auto;  /* Activa el desplazamiento vertical */
+  overflow-y: auto; /* Activa el desplazamiento vertical */
 }

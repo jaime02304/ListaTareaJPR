@@ -33,15 +33,22 @@ export class TareasEliminadasComponent implements OnInit {
       }
     );
   }
-
-  borrarCache(tarea: TareaNueva): void {
-    this.tareaServiciosService.borrarCacheTarea(tarea.id).subscribe(
-      (resp: any) => {
-        console.log(resp);
-      },
-      (error) => {
-        console.log(error);
-      }
+  //Metodo que recoge las tareas que tienen el elemento finalizado en true y las guarda en un array para borrarlas en la base de datos
+  borrarCacheCompleto(tarea: TareaNueva[]) {
+    const elementosABorrar = tarea.filter(
+      (elemento) => elemento.eliminada === true
     );
+
+    elementosABorrar.forEach((borradoElemento) => {
+      this.tareaServiciosService.borrarCacheTarea(borradoElemento.id).subscribe(
+        (resp: any) => {
+          console.log(resp);
+          this.mostrar();
+        },
+        (error) => {
+          console.log(error);
+        }
+      );
+    });
   }
 }

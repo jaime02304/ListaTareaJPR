@@ -4,12 +4,13 @@
       <h4 class="mb-0">Lista de Tareas Finalizadas</h4>
     </div>
     <ul class="list-group list-group-flush w-100">
-      @for (tarea of tareas; track $index) {
-        @if
+      @for (tarea of tareas; track $index) { @if
       (tarea.finalizada===true&&tarea.eliminada===false) {
-      <app-tareas-detalles [tarea]="tarea"></app-tareas-detalles>
-      }
-       }
+      <app-tareas-detalles
+        [tarea]="tarea"
+        (EliminarTarea)="eliminarTareas(tarea)"
+      ></app-tareas-detalles>
+      } }
     </ul>
   </div>
 </div>

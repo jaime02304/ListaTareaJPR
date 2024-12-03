@@ -6,8 +6,8 @@ import { MostrarTareasComponent } from './mostrar-tareas/mostrar-tareas.componen
 import { AppComponent } from './app.component';
 
 export const routes: Routes = [
-  {path: 'aniadirTarea', component:AniadirTareaComponent},
-  {path: 'tareaEliminadas', component:TareasEliminadasComponent},
-  {path:'tareaFinalizadas', component:TareasFinalizadasComponent},
-  {path:'mostrarTareas', component:MostrarTareasComponent}
+  { path: 'aniadirTarea', component: AniadirTareaComponent },
+  { path: 'tareaEliminadas', component: TareasEliminadasComponent },
+  { path: 'tareaFinalizadas', component: TareasFinalizadasComponent },
+  { path: 'mostrarTareas', component: MostrarTareasComponent },
 ];

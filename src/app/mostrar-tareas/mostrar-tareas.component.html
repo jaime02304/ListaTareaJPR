@@ -8,11 +8,10 @@
       tarea.eliminada===false) {
       <app-tareas-detalles
         [tarea]="tarea"
-
+        (EliminarTarea)="eliminarTareas($event)"
+        (FinalizarTarea)="finalizarTareas($event)"
       ></app-tareas-detalles>
       } }
     </ul>
   </div>
 </div>
-        <!-- (EliminarTarea)="eliminarTareas($event)"
-        (FinalizarTarea)="finalizarTareas($event)" -->
