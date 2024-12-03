@@ -17,10 +17,10 @@ export class TareasDetallesComponent {
   @Output() FinalizarTarea = new EventEmitter<any>();
 
   defTarea() {
-    this.EliminarTarea.emit();
+    this.EliminarTarea.emit(this.tarea);
   }
 
   finTarea() {
-    this.FinalizarTarea.emit();
+    this.FinalizarTarea.emit(this.tarea);
   }
 }
