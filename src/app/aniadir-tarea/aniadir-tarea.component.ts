@@ -15,6 +15,7 @@ export class AniadirTareaComponent {
   tareaServiciosService = inject(TareaServiciosService);
   //Nueva tarea estructura predefinida
   tareaNueva: TareaNueva = {
+    id:'',
     name: '',
     finalizada: false,
     eliminada: false,
@@ -26,6 +27,7 @@ export class AniadirTareaComponent {
         console.log('Tarea añadida correctamente:', resp);
         //Limpia el formulario
         this.tareaNueva = {
+          id:'',
           name: '',
           finalizada: false,
           eliminada: false,

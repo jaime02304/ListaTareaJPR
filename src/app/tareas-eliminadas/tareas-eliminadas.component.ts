@@ -18,6 +18,10 @@ export class TareasEliminadasComponent implements OnInit {
   tareas: any[] = [];
   //se ejecuta cuando se inicia la pagina
   ngOnInit(): void {
+    this.mostrar();
+  }
+
+  mostrar(): void {
     //Coge el leer todas las tareas del servicio y las guarda en el arra de tareas
     this.tareaServiciosService.leerTareas().subscribe(
       (resp: any) => {
@@ -29,5 +33,15 @@ export class TareasEliminadasComponent implements OnInit {
       }
     );
   }
- 
+
+  borrarCache(tarea: TareaNueva): void {
+    this.tareaServiciosService.borrarCacheTarea(tarea.id).subscribe(
+      (resp: any) => {
+        console.log(resp);
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
+  }
 }

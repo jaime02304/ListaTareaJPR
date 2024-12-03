@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { TareaNueva } from '../Modelos/tarea-nueva';
 
 @Injectable({
   providedIn: 'root',
@@ -26,5 +25,9 @@ export class TareaServiciosService {
   //Finalizar una tarea por su nombre
   finalizarTareas(name: string, tarea: any): Observable<any> {
     return this.httpClient.put(`${this.apiUrl}/${name}`, tarea);
+  }
+
+  borrarCacheTarea(id:string): Observable<any>{
+    return this.httpClient.delete(`${this.apiUrl}/${id}`)
   }
 }

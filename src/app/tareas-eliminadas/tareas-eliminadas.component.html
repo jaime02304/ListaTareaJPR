@@ -5,7 +5,10 @@
     </div>
     <ul class="list-group list-group-flush w-100">
       @for (tarea of tareas; track $index){ @if(tarea.eliminada===true) {
+     <div style="display: flex; justify-content: center; align-items: center;">
       <app-tareas-detalles [tarea]="tarea"></app-tareas-detalles>
+      <button class="btn btn-success btn-sm me-2" (click)="borrarCache(tarea)">Finalizar tarea</button>
+     </div>
       } }
     </ul>
   </div>

@@ -18,8 +18,12 @@ export class MostrarTareasComponent implements OnInit {
   tareas: any[] = [];
   //se ejecuta cuando se inicia la pagina
   ngOnInit(): void {
-    //Coge el leer todas las tareas del servicio y las guarda en el arra de tareas
-    this.tareaServiciosService.leerTareas().subscribe(
+   this.mostrar();
+  }
+
+  mostrar():void{
+     //Coge el leer todas las tareas del servicio y las guarda en el arra de tareas
+     this.tareaServiciosService.leerTareas().subscribe(
       (resp: any) => {
         this.tareas = resp;
         console.log(this.tareas);
