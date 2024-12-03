@@ -1,0 +1,28 @@
+{
+    "ListaTareas": [
+      {
+        "name": "Realizar el proyecto Angular",
+        "finalizada": false,
+        "eliminada": false,
+        "id": "4094"
+      },
+      {
+        "id": "e174",
+        "name": "hola",
+        "finalizada": false,
+        "eliminada": true
+      },
+      {
+        "id": "504c",
+        "name": "bola",
+        "finalizada": true,
+        "eliminada": true
+      },
+      {
+        "id": "8828",
+        "name": "asfvafv",
+        "finalizada": true,
+        "eliminada": false
+      }
+    ]
+  }
