@@ -12,6 +12,17 @@
         [ngModelOptions]="{ standalone: true }"
         aria-describedby="emailHelp"
       />
+      <label for="nombreTarea" class="form-label titulo"
+        >Detalles de la tarea</label
+      >
+      <textarea
+        type="text"
+        class="form-control"
+        id="detalleTarea"
+        [(ngModel)]="tareaNueva.Detalles"
+        [ngModelOptions]="{ standalone: true }"
+        aria-describedby="emailHelp"
+      ></textarea>
     </div>
     <div class="mb-3 form-check divCheck">
       <input

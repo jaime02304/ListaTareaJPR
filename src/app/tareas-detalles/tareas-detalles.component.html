@@ -1,6 +1,46 @@
+<!-- Parte del ngbModel donde se encuentra la parte interactiva de modificacion y detalles -->
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title" #nameT>{{ tarea.name }}</h4>
+    <button
+      type="button"
+      class="btn-close"
+      aria-label="Close"
+      (click)="modal.dismiss('Cross click')"
+    ></button>
+  </div>
+  <div class="modal-body">
+    <form>
+      <div class="mb-3">
+        <label for="dateOfBirth">Detalles</label>
+        <div class="input-group">
+          <input
+            id="dateOfBirth"
+            class="form-control"
+            placeholder="{{ tarea.Detalles }}"
+            name="dp"
+            ngbDatepicker
+            #dp="ngbDatepicker"
+            #miInput
+          />
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button
+      type="button"
+      class="btn btn-outline-secondary"
+      (click)="modal.close(miInput.value)"
+    >
+      Guardar
+    </button>
+  </div>
+</ng-template>
+
 <li class="list-group-item d-flex justify-content-between align-items-center">
   <div>
-    <p class="mb-0 text-dark">
+    <p class="mb-0 text-dark" (click)="open(content, tarea.id)">
       <strong>Tarea: {{ tarea.name }} </strong>
     </p>
   </div>

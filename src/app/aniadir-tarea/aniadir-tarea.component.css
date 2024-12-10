@@ -43,3 +43,7 @@ form {
   flex-direction: column;
   align-items: center;
 }
+
+#detalleTarea{
+  width: 75%;
+}

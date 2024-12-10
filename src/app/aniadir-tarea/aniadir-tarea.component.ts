@@ -20,6 +20,7 @@ export class AniadirTareaComponent {
     name: '',
     finalizada: false,
     eliminada: false,
+    Detalles:'',
   };
   //Metodo que genera un id tipo nano desde la libreria nanoid
   private generarIdNanoid(): string {
@@ -38,6 +39,7 @@ export class AniadirTareaComponent {
           name: '',
           finalizada: false,
           eliminada: false,
+          Detalles:'',
         };
       },
       (error) => {

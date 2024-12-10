@@ -19,14 +19,27 @@ export class TareaServiciosService {
   }
   //Eliminar una tarea por su id(cambia el elemento eliminada de tipo booleano)
   eliminarTareas(id: string, tarea: any): Observable<any> {
-    return this.httpClient.put(`${this.apiUrl}/${id}`, tarea);
+    return this.httpClient.put(
+      `${this.apiUrl}/${id}`,
+      tarea
+    ) as Observable<any>;
   }
   //Finalizar una tarea por su id(cambia el elemento finalizada de tipo booleano)
   finalizarTareas(id: string, tarea: any): Observable<any> {
-    return this.httpClient.put(`${this.apiUrl}/${id}`, tarea);
+    return this.httpClient.put(
+      `${this.apiUrl}/${id}`,
+      tarea
+    ) as Observable<any>;
   }
   //Borra la cache(base de datos) de las tareas eliminadas
   borrarCacheTarea(id: string): Observable<any> {
-    return this.httpClient.delete(`${this.apiUrl}/${id}`);
+    return this.httpClient.delete(`${this.apiUrl}/${id}`) as Observable<any>;
+  }
+  //Metodo con el que puedes modificar el detalle de la tarea
+  modificarDetalles(id: string, tarea: any): Observable<any> {
+    return this.httpClient.put(
+      `${this.apiUrl}/${id}`,
+      tarea
+    ) as Observable<any>;
   }
 }
